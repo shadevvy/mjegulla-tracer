@@ -9,10 +9,17 @@ use Illuminate\Http\Request;
 
 class TrafficController extends Controller
 {
+    public function index()
+    {
+        // Retrieve tracking data
+        $data = Traffic::all();
+        Log::info($data);
+        return response()->json($data);
+    }
     public function track(Request $request)
     {
         Log::info($request->all());
-        // dd($request->all());
+
         $validated = $request->validate([
             'user_ip' => 'required|ip',
             'country' => 'nullable|string',
