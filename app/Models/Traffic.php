@@ -9,6 +9,8 @@ class Traffic extends Model
 {
     use HasFactory;
 
+    protected $table = 'traffics';
+
     protected $fillable = [
         'site_id',
         'user_ip',
