@@ -14,8 +14,11 @@ class Traffic extends Model
     protected $fillable = [
         'site_id',
         'user_ip',
+        'website_url',
+        'website_title',
         'country',
         'device',
         'user_agent',
+        'browser',
     ];
 }
